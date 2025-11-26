@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel=""stylesheet href="css/contacto.css">
+
+</head>
+<body>
+
+<div class="stars"></div>
+<header>
+  <nav class="navbar">
+    <h1 class="logo">Astronomía</h1>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="historia.html">Historia</a></li>
+      <li><a href="planetas.html">Planetas</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <button class="menu-btn">☰</button>
+  </nav>
+</header>
+
+<section>
+  <h1>Contacto</h1>
+
+  <form onsubmit="return validarFormulario()">
+    <input type="text" id="nombre" placeholder="Tu nombre">
+    <input type="email" id="correo" placeholder="Tu correo">
+    <textarea placeholder="Tu mensaje"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+  <div id="explosion"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

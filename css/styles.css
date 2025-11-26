@@ -1,0 +1,155 @@
+/*reset inicial*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0c0f26;
+  color: white;
+  line-height: 1.6;
+}
+
+/*Barra de navegacion*/
+header {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 15px;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+    padding: 10px 15px;
+    display: block;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+    background-color: white;
+    border: 2px solid skyblue;
+    border-radius: 6px;
+    color: black;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+/*HERO*/
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 50px;
+  animation: fadeIn 2s;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 10px;
+  animation: fadeIn 3s;
+}
+
+/*Animaciones de entrada*/
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* fondo de constelacion*/
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/*contenido*/
+section {
+  padding: 100px 20px;
+}
+
+/*formulario de registro*/
+form {
+  background: rgba(255,255,255,0.1);
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+form button {
+  background: #6cc6ff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #449ed1;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: black;
+    padding: 10px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
