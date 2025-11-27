@@ -27,9 +27,9 @@
 <section>
   <h1>Contacto</h1>
 
-  <form onsubmit="return validarFormulario()">
+  <form onsubmit="return validarFormulario()" novalidate>
     <input type="text" id="nombre" placeholder="Tu nombre">
-    <input type="email" id="correo" placeholder="Tu correo">
+    <input type="email" id="correo" placeholder="Tu correo" oninvalid="return false">
     <textarea placeholder="Tu mensaje"></textarea>
     <button type="submit">Enviar</button>
   </form>
@@ -37,5 +37,10 @@
 </section>
 
 <script src="script.js"></script>
+<footer class="footer">
+    <p class="creditos">© 2025 Astronomía — Joel Herrera</p>
+    <p class="disclaimer">
+        Este sitio es un proyecto académico de curso. Las imágenes y utilizados pertenecen a sus respectivos autores y su respectivos derechos</p>
+</footer>
 </body>
 </html>

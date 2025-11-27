@@ -29,9 +29,10 @@ header {
 }
 
 .navbar .logo {
-  font-size: 22px;
+  font-size: 40px;
   font-weight: bold;
-}
+  font-family:'Times New Roman', Times, serif;
+  }
 
 .menu {
   list-style: none;
@@ -54,9 +55,10 @@ header {
 
 .menu li a:hover {
     background-color: white;
-    border: 2px solid skyblue;
-    border-radius: 6px;
+    border: 2px solid rgb(27, 21, 131);
+    border-radius: 20px;
     color: black;
+    padding: 10px;
 }
 
 .menu-btn {
@@ -140,7 +142,6 @@ form button:hover {
   background: #449ed1;
 }
 
-/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
   .menu {
     display: none;
@@ -152,4 +153,227 @@ form button:hover {
   .menu-btn {
     display: block;
   }
+}
+.planetas-home {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.planetas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.planeta {
+  text-align: center;
+}
+
+.planeta img {
+  width: 120px;
+  animation: girar 10s linear infinite;
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.grid-plan-info {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tarjeta-planeta {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  border-radius: 12px;
+  transition: .3s;
+}
+
+.tarjeta-planeta:hover {
+  transform: scale(1.06);
+}
+
+.tarjeta-planeta img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.3);
+   box-shadow: 0 0 15px rgba(0,150,255,0.5);
+   animation: girar 50s linear infinite;
+}
+
+.footer {
+    background: #0a0a0a;
+    padding: 25px 20px;
+    text-align: center;
+    color: #ccc;
+    margin-top: 40px;
+}
+
+.footer .creditos {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.footer .disclaimer {
+    font-size: 0.85rem;
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+.planetas-header {
+  padding-top: 120px;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.planetas-header h1 {
+  font-size: 48px;
+  text-shadow: 0 0 10px #6cc6ff;
+}
+
+.planetas-header p {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+
+/* ===== GRID DE TARJETAS ===== */
+.grid-planetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card-planeta {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-planeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #4ecbff7e;
+}
+
+.card-planeta img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+
+/* ===== COMPARACIÓN DE TAMAÑOS ===== */
+.comparacion {
+  margin-top: 60px;
+  text-align: center;
+  padding: 40px;
+}
+
+.comparacion h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.tamano-planetas {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.t {
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  background: #4ecbff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0 10px #6cc6ff;
+}
+.galeria-section {
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+}
+
+.galeria-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.galeria-img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.galeria-img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+
+@keyframes zoomInSoft {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lightbox img {
+  animation: zoomInSoft 0.35s ease-out;
 }
