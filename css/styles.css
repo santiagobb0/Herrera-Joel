@@ -248,7 +248,7 @@ form button:hover {
 }
 
 
-/* ===== GRID DE TARJETAS ===== */
+/* cuadros de tarjetas de planetas.html */
 .grid-planetas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -282,7 +282,7 @@ form button:hover {
 }
 
 
-/* ===== COMPARACIÓN DE TAMAÑOS ===== */
+/* comparacion de tamaños de planetas.html*/
 .comparacion {
   margin-top: 60px;
   text-align: center;
@@ -341,7 +341,7 @@ form button:hover {
   transform: scale(1.05);
 }
 
-/* Lightbox */
+/* Margen de las imagenes brillante de galeria.html*/
 .lightbox {
   position: fixed;
   top: 0;
@@ -363,6 +363,7 @@ form button:hover {
   box-shadow: 0 0 25px rgba(255,255,255,0.4);
 }
 
+/*Animacion al tocar alguna imagen de galeria.html*/
 @keyframes zoomInSoft {
   from {
     opacity: 0;

@@ -30,9 +30,9 @@ function validarFormulario() {
     alert("El mensaje debe tener al menos 5 caracteres.");
     return false;
   }
-
-  alert("Mensaje enviado correctamente 🌌");
-  return true;
+  
+  alert("Mensaje enviado correctamente ");
+return false;
 }
 //Fondo generado de estrellas en todo el sitio, aleatoria posicion cada vez
 function generarEstrellas() {

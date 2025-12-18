@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Contacto</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel=""stylesheet href="css/contacto.css">
 
 </head>
 <body>
@@ -26,11 +25,10 @@
 
 <section>
   <h1>Contacto</h1>
-
-  <form onsubmit="return validarFormulario()" novalidate>
-    <input type="text" id="nombre" placeholder="Tu nombre">
-    <input type="email" id="correo" placeholder="Tu correo" oninvalid="return false">
-    <textarea placeholder="Tu mensaje"></textarea>
+  <form action="/contacto" method="POST" onsubmit="return validarFormulario()">
+    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+    <input type="email" id="correo" name="correo" placeholder="Tu correo" oninvalid="return false">
+    <textarea name="mensaje" placeholder="Tu mensaje"></textarea>
     <button type="submit">Enviar</button>
   </form>
   <div id="explosion"></div>
